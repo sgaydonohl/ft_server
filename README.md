@@ -10,9 +10,13 @@ Then, try on those to get to know docker :
 CMD lines that might help you :
 
 docker build -t yourImageName .
+
 docker run  -p 80:80 -it yourImageName
+
 docker images purge
 
 Notes on the second cmd :
+
 -p : define the port
+
 -it  : let the image running on your terminal (don’t forget to service nginx start !!)
