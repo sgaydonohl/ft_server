@@ -1,4 +1,4 @@
-Install the wonderful https://github.com/alexandregv/42toolbox
+Git clone the wonderful https://github.com/alexandregv/42toolbox
 
 Run the init_docker script to start docker on your machine properly
 
