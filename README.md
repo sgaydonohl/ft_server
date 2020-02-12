@@ -11,7 +11,9 @@ Then, try on those to get to know docker :
 
 3 - https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-lemp-nginx-mariadb-and-php-on-debian-10
 
+4 - https://serverfault.com/questions/224122/what-is-crt-and-key-files-and-how-to-generate-them
 
+5 - https://medium.com/faun/setting-up-ssl-certificates-for-nginx-in-docker-environ-e7eec5ebb418
 
 CMD lines that might help you :
 
@@ -24,6 +26,6 @@ docker images purge
 
 Notes on the second cmd :
 
--p : define the port
+-p : define the port (you can define several port in the same cmd line)
 
 -it  : let the image running on your terminal (don’t forget to service nginx start !!)
