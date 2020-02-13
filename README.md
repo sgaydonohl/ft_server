@@ -15,6 +15,8 @@ Then, try on those to get to know docker :
 
 5 - https://medium.com/faun/setting-up-ssl-certificates-for-nginx-in-docker-environ-e7eec5ebb418
 
+6 - https://api.wordpress.org/secret-key/1.1/salt/
+
 CMD lines that might help you :
 
 docker build -t yourImageName .
