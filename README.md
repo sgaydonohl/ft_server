@@ -17,6 +17,8 @@ Then, try on those to get to know docker :
 
 6 - https://api.wordpress.org/secret-key/1.1/salt/
 
+
+
 CMD lines that might help you :
 
 docker build -t yourImageName .
