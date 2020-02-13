@@ -1,0 +1,44 @@
+server {
+	listen 80;
+	listen [::]:80;
+	ssl off;
+	server_name localhost www.localhost;
+	return 301 https://$host$request_uri;
+}
+
+server {
+	# SSL configuration
+	listen 443 ssl;
+    	listen [::]:443 ssl; 
+	ssl on;   	
+	ssl_certificate /etc/ssl/certs/localhost.crt;
+   	ssl_certificate_key /etc/ssl/certs/localhost.key;
+	
+	#root
+	root /var/www/html;
+	# Add index.php to the list if you are using PHP
+	index index.php index.html index.nginx-debian.html;
+
+	server_name localhost www.localhost;
+
+	#Set autoindex for no 404 error if no index file
+	location / {
+		autoindex on;
+	}
+
+	#location /wordpress {
+    #    try_files $uri $uri/ /index.php?;	
+	#}
+	
+	location /phpmyadmin {
+        try_files $uri $uri/ /index.php?;	
+	}
+
+
+	#PHP FPM config
+	location ~ \.php$ {
+		include snippets/fastcgi-php.conf;
+		fastcgi_pass unix:/run/php/php7.3-fpm.sock;
+	}
+
+}
